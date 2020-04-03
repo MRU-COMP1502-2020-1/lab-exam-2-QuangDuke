@@ -15,6 +15,17 @@ public class LLine {
 	}
 	
 	public void process() throws LSystemSymbolException, LSystemLengthException {
+		for ( char c : line) {
+			if ( !rules.contains(c) ){
+				throw new LSystemSymbolException("Symbol(s) has no rules.");
+			}
+		}
+		if( line.length == 0) {
+			throw new LSystemLengthException();
+		}
+		if (line.toString().contains("A")) {
+			
+		}
 		
 	}
 	
